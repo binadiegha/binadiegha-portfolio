@@ -1,0 +1,18 @@
+.backgroundVideo{
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2000;
+  opacity: 1;
+  pointer-events: none;
+  /* border: 1px solid red; */
+  height: 100vh;
+}
+
+.backgroundVideo video{
+  height: 100%;
+  object-fit: cover;
+    opacity: .4;
+}
+
