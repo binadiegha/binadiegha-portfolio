@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NavigationRoot from "./routes/root";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// react router dom implementatioin
+import { createBrowserRouter, RouterProvider , BrowserRouter as Router, Routes,Route} from 'react-router-dom';
+import Error404 from "./pages/errorPages/Error404";
+import MyRoutes from "./routes";
+
+const App = ():JSX.Element => {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <NavigationRoot />,
+      errorElement: <Error404 />,
+      children : [ ...MyRoutes]
+    }
+  ])
+  return (<>
+      <RouterProvider router={router}/>
+      <Router>
+        <Routes>
+          <Route path="/nav" element={<NavigationRoot/>}/>
+        </Routes>
+      </Router>
+    </>)
 }
 
 export default App;
