@@ -1,4 +1,5 @@
 import React from "react"
+import Hello from "../pages/Hello";
 
 // import components (Pages) to be rendered
 
@@ -21,7 +22,7 @@ const MyRoutes:RouteArray = [
   },
   {
     path: 'hello',
-    element: <h1>This is Hello! (contact) page</h1>
+    element: <Hello />
   },
 ];
 
