@@ -18,7 +18,7 @@ const App = ():JSX.Element => {
   return (<>
       <RouterProvider router={router}/>
       <Router>
-        <Routes>
+        <Routes >
           <Route path="/nav" element={<NavigationRoot/>}/>
         </Routes>
       </Router>

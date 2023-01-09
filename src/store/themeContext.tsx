@@ -36,12 +36,14 @@ const ThemeContextProvider = ({children}:any):JSX.Element => {
 
   const [theme, setTheme] = useState<object>(themeData);
 
-  const insertData = (data: theme) => {
+  const themeSetter = (data: themeSwitch) => {
     setTheme({...theme, ...data})
+    
   }
 
+
   return (
-    <ThemeContext.Provider value={{ ...theme, insertData }}>
+    <ThemeContext.Provider value={{ ...theme, themeSetter }}>
       {children}
     </ThemeContext.Provider>
   )
