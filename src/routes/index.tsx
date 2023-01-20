@@ -1,5 +1,6 @@
 import React from "react"
 import Hello from "../pages/Hello";
+import Home from "../pages/Home";
 
 // import components (Pages) to be rendered
 
@@ -10,7 +11,7 @@ type RouteArray = Array<{ path: string, element: JSX.Element }>;
 const MyRoutes:RouteArray = [
   {
     path: '/',
-    element: <h1>About me</h1>,
+    element: <Home />,
   },
   {
     path: '/projects',
