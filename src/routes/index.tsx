@@ -1,11 +1,14 @@
 import React from "react"
 import Hello from "../pages/Hello";
 import Home from "../pages/Home";
+import Projects from "../pages/projects";
 
 // import components (Pages) to be rendered
-
+interface pathType {
+  path: string, element: JSX.Element
+}
 // type declaration
-type RouteArray = Array<{ path: string, element: JSX.Element }>;
+type RouteArray = Array<{ path: string, element: JSX.Element, children?: pathType[] }>;
 
 // paths array
 const MyRoutes:RouteArray = [
@@ -14,8 +17,14 @@ const MyRoutes:RouteArray = [
     element: <Home />,
   },
   {
-    path: '/projects',
-    element: <h1>This is projects page</h1>
+    path: '/projects/',
+    element: <Projects />,
+    children : [
+     { 
+      path: ':name',
+      element: <Projects />,
+    }
+    ]
   },
   {
     path: '/resume',

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext} from "react";
+import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
 import Logo from "../../assets/SVGs/logo"; 
@@ -10,6 +10,7 @@ import './navstyle.css'
 import LigthVideo from  '../../assets/videos/video-bg-light.mp4';
 import DarkVideo from  '../../assets/videos/video-bg-light-negate.mp4';
 import { useThemeContext } from "../../store/themeContext";
+import { motion } from "framer-motion/dist/framer-motion";
 
 
 const NavigationRoot = ():JSX.Element => {
@@ -37,18 +38,19 @@ const NavigationRoot = ():JSX.Element => {
               <li><Link to="resume">Resume</Link></li>
               <li><Link to="hello">Hello!</Link></li>
           </ul>
-          <div className="day-icon cursor-pointer" onClick={changeTheme}>
+          <motion.div layoutID="switch" 
+          className="day-icon cursor-pointer" onClick={changeTheme}>
             { isLightTheme ? <LightSwitch Fill="black"/> : <Darkswitch Fill="white"/> }
             
-          </div>
+          </motion.div>
       </div>
       </div>
 
 
-      <div className="backgroundVideo bg-white dark:bg-black">
+      <motion.div className="backgroundVideo bg-white dark:bg-black">
         <video src={ isLightTheme ? LigthVideo : DarkVideo } className="bg-video" autoPlay loop muted >
         </video>
-      </div>
+      </motion.div>
 
     
         <Outlet />
