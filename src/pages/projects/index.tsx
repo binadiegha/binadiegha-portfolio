@@ -1,9 +1,6 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom';
-// import {AnimatePresence, motion} from "framer-motion";
-import {LayoutGroup, AnimatePresence, motion} from "framer-motion/dist/framer-motion";
-import { spring } from 'framer-motion';
-import { Expression } from 'typescript';
+import {motion} from "framer-motion/dist/framer-motion";
 import ProjectsList from './ProjectsList';
 
 interface Props {
