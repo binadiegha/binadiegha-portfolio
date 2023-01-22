@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 import {motion} from "framer-motion/dist/framer-motion";
 import ProjectsList from './ProjectsList';
 
-
 interface Props {
   className?: string | object,
   style?: object,
