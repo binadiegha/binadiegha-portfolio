@@ -1,9 +1,18 @@
 .project{
   height: 350px;
   /* background-color: yellow; */
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
+}
+
+.myimage{
+  /* border: 1px solid red; */
 }
 
 .caption{
-  background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0.3));
+  background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3), rgba(0,0,0,0.00) );
+  transform: translateY(100%);
+}
+
+.project:hover .caption{
+  transform: translateY(0%);
 }
