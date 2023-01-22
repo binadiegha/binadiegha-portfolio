@@ -1,8 +1,13 @@
 import React from 'react'
 
-const Tags = () => {
+interface Props {
+  label?: string,
+  className?: 'string',
+}
+
+const Tags = ({label}:Props) => {
   return (
-    <div>Tags</div>
+    <div className=' w-max  px-4 py-1 rounded-xl bg-purple-300 text-purple-900 font-medium capitalize'> {label ? label : 'label'} </div>
   )
 }
 
