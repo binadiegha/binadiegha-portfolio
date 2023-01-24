@@ -15,6 +15,7 @@ import { motion } from "framer-motion/dist/framer-motion";
 
 const NavigationRoot = ():JSX.Element => {
   const { themeSetter, isLightTheme }:any = useThemeContext()
+
   const changeTheme = () => {
     themeSetter({isLightTheme: !isLightTheme})
   }

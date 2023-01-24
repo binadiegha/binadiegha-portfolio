@@ -13,7 +13,10 @@ import Git from "./git";
 import ReactIcon from './react';
 import Nodejs from './nodejs';
 import Redux from './redux';
-import BouncyArrow from './bouncyArrow'
+import BouncyArrow from './bouncyArrow';
+import WebIcon from "./website";
+import OpenIcon from "./open";
+import Close from "./close";
 
 // add imports to array
 
@@ -33,6 +36,10 @@ export const ReactIconIcon = ReactIcon
 export const ReduxIcon = Redux
 export const NodejsIcon = Nodejs;
 export const BouncyArrowIcon = BouncyArrow;
+export const WebIconIcon = WebIcon;
+export const OpenIconIcon = OpenIcon;
+export const CloseIcon = Close;
+
 
 
 
@@ -52,6 +59,9 @@ Nodejs,
 ReactIcon,
 Redux,
 BouncyArrow,
+OpenIcon,
+Close,
+WebIcon,
 }
 
 export default Icons;

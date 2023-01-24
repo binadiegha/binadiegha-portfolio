@@ -1,21 +1,6 @@
 import React, { createContext, useContext, useState } from 'react';
 
 // Declaring types and interfaces
-export interface themeColors {
-  bgColor: string,
-  fgColor: string
-}
-
-export interface theme {
-  isLightTheme?: boolean,
-  light?: themeColors,
-  dark?: themeColors,
-}
-
-interface themeSwitch {
-  isLightTheme: boolean;
-}
-
 // Functional component
 export const ThemeContext = createContext({});
 

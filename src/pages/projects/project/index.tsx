@@ -3,19 +3,33 @@ import './project.styles.css';
 import PorrtfolioGif from '../../../assets/gifs/portfolio.gif';
 import Tags from '../tags';
 import {motion } from 'framer-motion/dist/framer-motion'
+import { useToggleContext } from '../../../store/toggleContext';
 
 const Project = () => {
+
+  const {toggle, toggleSetter}:any = useToggleContext()
+
+
+  const showDetails = (e:any) => {
+    toggleSetter();
+
+    console.log(e)
+  }
+
+  
   return (
     <div className='project w-1/4 flex flex-col items-end justify-end relative overflow-clip'>
       
       <motion.div  
+
+        onClick={showDetails}
         layout
         intial={{opacity: 0}}
         animate={{opacity: 1}}
         exit={{opacity: 0}}
         className="caption p-5 text-white cursor-pointer">
 
-        <h3 className='text-xl font-semibold z-20 mt-10'>React text colorfy</h3>
+        <h3 className='text-xl font-semibold z-20 mt-10 mb-3'>React text colorfy</h3>
 
         <p>Welcome to our library of original guides to the world of typography, which the Google Fonts team is </p>
 
